@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF−8"?>
+<!DOCTYPE comanda SYSTEM "comanda.dtd"> 
+/*1*/
+CREATE TABLE pokemon (
+    Numero int not null,
+    nom Varchar(20) not null,
+    pes int not null,
+    alcada int not null,
+    evoluciona_de int
+);
+CREATE TABLE atac (
+    id int not null,
+    nom Varchar(20) not null
+);
+CREATE TABLE tenir(
+    num_pokemon int not null,
+    id_atac int not null
+);
+/*2*/
+ALTER TABLE pokemon 
+    add CONSTRAINT PK_NUMERO primary key(Numero);
+
+ALTER TABLE atac
+    add CONSTRAINT PK_ID primary key(id);
+
+/*3*/
+ALTER TABLE pokemon
+    add CONSTRAINT FK_EVO FOREIGN key (evoluciona_de) REFERENCES POKEMON (numero)
+        on DELETE null
+        on update CASCADE;
+ALTER TABLE tenir
+    add CONSTRAINT FK_NUM_POKEMON FOREIGN KEY (num_pokemon) REFERENCES POKEMON (numero)
+        on DELETE RESTRICT
+        on CASCADE RESTRICT;
+ALTER TABLE tenir
+    add CONSTRAINT FK_ID_ATAC FOREING KEY (id_atac) REFERENCES ATAC (id)   
+        on DELETE RESTRICT
+        on update CASCADE;
+
+/*4*/
+ALTER TABLE pokemon
+    add COLUMN TIPOLOGIA varchar(50);
+
+/*5*/
+ALTER TABLE pokemon
+    add CONSTRAINT CH_TIPOLOGIA CHECK
+    (TIPOLOGIA = "Elèctric" OR 
+    TIPOLOGIA =  "aigua" OR 
+    TIPOLOGIA = "foc" OR 
+    TIPOLOGIA = "planta" OR 
+    TIPOLOGIA = "psíquic");
+
+/*6*/
+ALTER TABLE pokemon
+    MODIFY COLUMN alcada float not null;
+
+/*7*/
+ALTER TABLE pokemon
+    CHANGE COLUMN TIPOLOGIA tipus varchar(30) not null;
+/*8*/
+
+ALTER TABLE POKEMON
+    drop COLUMN pes;
+
+/*9*/
+ drop table tenir;
+ drop table atac;
+ drop table pokemon;

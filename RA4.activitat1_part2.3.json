@@ -1,0 +1,80 @@
+{
+    "pokemons":{
+        "pokemon": [
+            {
+                "id": "108",
+                "nom": "Lickitung",
+                "tipus": "Normal",
+                "pes": "65.5Kg",
+                "altura": "1.2m",
+                "estadistiques": {
+                    "velocitat": "3",
+                    "fortaleça": "4",
+                    "precisió": "3",
+                    "resistencia": "5"
+                    },
+                "movimientos": {
+                    "placaje": {
+                        "potencia": 40,
+                        "contacte": 100 
+                    },
+                    "descanso": {
+                        "potencia": "N/A",
+                        "contacte": "N/A"
+                    },
+                    "terratemblor": {
+                        "potencia": 60,
+                        "contacte": 100 
+                    },
+                    "rodar": {
+                        "potencia": 30,
+                        "contacte": 90 
+                    }
+                },
+                "imatge": "https://www.wikidex.net/wiki/Archivo:Lickitung.png",
+                "evoluciona": {
+                    "nivel": "34 + rodar",
+                    "evoluciones": "Lickilicky"
+                }
+            },
+            {
+                "id": "123",
+                "nom": "Scyther",
+                "tipus": "insecte, volador" ,
+                "pes": "56Kg",
+                "altura": "1.5m" ,
+                "estadistiques": {
+                    "velocitat": "4",
+                    "fortaleça": "4",
+                    "precisió": "5",
+                    "resistencia": "2"
+                    },
+                "movimientos": {
+                    "ataque rapido" :{
+                        "potencia": 40,
+                        "contacte": 100
+                    },
+                    "cort furia" :{
+                        "potencia": 40,
+                        "contacte": 95
+                    },
+                    "agilidad" :{
+                        "potencia": "N/A",
+                        "contacte": "N/A"
+                    },
+                    "tijera x" :{
+                        "potencia": 80,
+                        "contacte": 100
+                    }
+                },
+                "imatge": "https://www.wikidex.net/wiki/Archivo:Scyther.png",
+                "evoluciona": {
+                    "condición": "Intercambio equipado con revestimiento metálico",
+                    "evoluciones": "scizor"
+                    
+                }
+            }
+        ]
+        
+    }
+}

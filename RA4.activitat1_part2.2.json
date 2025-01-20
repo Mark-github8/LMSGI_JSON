@@ -1,0 +1,44 @@
+{
+  "devices": {
+    "device": [
+      {
+        "name": "Matebook",
+        "company": "Huawai",
+        "inches": 13,
+        "stock": true,
+        "price": 780,
+        "internacional_info": "C:\\Documents\\files\\matebook.json"
+      },
+      {
+        "name": "Titan",
+        "company": "Slimebook",
+        "inches": 15.6,
+        "stock": true,
+        "price": 1949,
+        "slogan": "We've proposed 2 slogans: \"Slimebook Titian: Unleash Power in Every Pixel\" OR \" Slimebook Titian: Powerhouse Performance\""
+      },
+      {
+        "name": "Matepad",
+        "company": "Huawai",
+        "inches": 10.4,
+        "stock": false,
+        "price": "",
+        "characteristics": ""
+      },
+      {
+        "name": "P50 Pocket",
+        "company": "Huawai",
+        "inches": 9,
+        "stock": true,
+        "price": 999,
+        "characteristics": {
+          "characteristic": [
+            "5000mhA battery",
+            "Super Amoled Plus",
+            "USB-C"
+          ]
+        }
+      }
+    ]
+  }
+}
